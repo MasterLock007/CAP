@@ -1,0 +1,55 @@
+<!--
+  Generated template for the HistorialmascotaPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      Historial de {{mascota.data.nombre}}
+    </ion-title>
+  </ion-navbar>
+    <ion-toolbar>
+      <ion-segment [(ngModel)]="pantalla" color="primary">
+        <ion-segment-button value="citas">
+          <ion-icon name="calendar"></ion-icon>
+        </ion-segment-button>
+        <ion-segment-button value="vacunas">
+          <ion-icon name="md-medkit"></ion-icon>
+        </ion-segment-button>
+      </ion-segment>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <div *ngIf="pantalla=='citas'" >
+      <ion-card *ngFor="let c of citas" (click)="irDetallesCita(c)">
+        <ion-card-header>
+          {{c.data.tipo}}
+        </ion-card-header>
+        <ion-card-content>
+          Fecha: {{c.data.fecha}}
+          <br/> Hora: {{c.data.hora}}
+          <br/> Motivo: {{c.data.motivo}}
+        </ion-card-content>
+      </ion-card>
+    </div>
+    <div *ngIf="pantalla=='vacunas'">
+      <ion-card *ngFor="let c of vacunas" (click)="irDetallesCita(c)">
+        <ion-card-header>
+          {{c.data.tipo}}
+        </ion-card-header>
+        <ion-card-content>
+          Fecha: {{c.data.fecha}}
+          <br/> Hora: {{c.data.hora}}
+          <br/> Motivo: {{c.data.motivo}}
+        </ion-card-content>
+      </ion-card>
+    </div>
+  <ion-fab right bottom style="margin: 3%">
+    <button ion-fab color="principal" (click)="iragendarcita()">
+      <ion-icon name="add"></ion-icon>
+    </button>
+  </ion-fab>
+</ion-content>

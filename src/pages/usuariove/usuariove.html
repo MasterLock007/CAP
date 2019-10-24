@@ -1,0 +1,60 @@
+<!--
+  Generated template for the UsuariovePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-header>
+  <ion-navbar color="hys">
+    <ion-title>Códigos QR</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+    <ion-item>
+
+        <ion-input type="text" placeholder="Empresa" [(ngModel)]="qrData">
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+          <ion-input type="text" placeholder="Lugar" [(ngModel)]="place" [disabled]="!qrData">
+          </ion-input>
+      </ion-item>
+
+  <ion-item>
+
+    <ion-input placeholder="De"  [(ngModel)]="letterObj.de">
+    </ion-input>
+  </ion-item>
+
+  <ion-item>
+
+      <ion-input placeholder="Para"  [(ngModel)]="letterObj.para">
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-input placeholder="Mensaje de Bienvenida" [(ngModel)]="letterObj.mensaje" rows="10">
+        </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input placeholder="Clave secreta" [(ngModel)]="secret" rows="10">
+      </ion-input>
+  </ion-item>
+
+
+    <div padding text-center>
+
+        <ngx-qrcode qrc-element-type="canvas" [qrc-value]="qrData+','+place+','+secret"></ngx-qrcode>
+
+    </div>
+
+
+<button ion-button full icon-left (click)="openLocalPdf()"><ion-icon name="barcode"></ion-icon>Crear PDF</button>
+<button color="secondary" ion-button full (click)="downloadAndOpenPdf()" [disabled]="!pdfObj">Descargar PDF</button>
+
+</ion-content>

@@ -1,0 +1,48 @@
+<ion-content padding class="fondo">
+
+   <ion-row class="logo-row">
+        <ion-col></ion-col>
+        <ion-col width-67>
+            <img src="assets/imgs/logo1HYS.png" class="logo" />
+
+        </ion-col>
+        <ion-col></ion-col>
+
+    </ion-row>
+
+<br>
+
+    <div>
+
+            <ion-item>
+                <ion-label floating>Correo electrónico</ion-label>
+                <ion-input type="email" [(ngModel)]="user.email" name="email" required="required"></ion-input>
+            </ion-item>
+<br>
+
+            <ion-item>
+                <ion-label floating>Contraseña</ion-label>
+                <ion-input type="password" [(ngModel)]="user.contrasena" name="contrasena" required="required"></ion-input>
+            </ion-item>
+
+            <div padding text-center>
+                <button ion-button block color="hys" (click)="submitLogin(user)" class="login-button">
+                    Iniciar sesión
+                </button>
+                <!-- Show dead button if form is not filled - *ngIf="email && password "
+                <button *ngIf="!email && !password" ion-button color="danger" clear  class="login-button">Iniciar sesión</button>
+                -->
+            </div>
+
+    </div>
+
+    <div padding text-center>
+      <button ion-button  color="dark" clear (click)="usuario()" class="login-button">Crear nueva cuenta</button>
+  </div>
+
+    <div padding text-center>
+        <button ion-button color="dark"  clear (click)="olvidoContrasena()" class="login-button" round>¿Olvidaste tu contraseña?</button>
+      </div>
+
+
+</ion-content>

@@ -1,0 +1,16 @@
+[
+  {
+    "category":"PC",
+    "subs": [
+      {
+        "subcategory":"Processor"
+      },
+      {
+        "subcategory":"Motherboard"
+      },
+      {
+        "subcategory":"Memory"
+      }
+    ]
+  }
+]

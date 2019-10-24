@@ -1,0 +1,44 @@
+<!--
+  Generated template for the UpdateUserPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Editar información</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+
+    <ion-item>
+        <ion-label stacked>Telefono de 10 digítos *</ion-label>
+        <ion-input type="text" [(ngModel)]="telefono" name="telefono" placeholder="ej. 555 555 5555" required="required" value="{{ datosusuario.telefono }}"></ion-input>
+    </ion-item>
+
+
+
+    <ion-item>
+      <ion-label floating>Área *</ion-label>
+      <ion-input type="text" [(ngModel)]="area" name="area" required="required"  value="{{ datosusuario.area }}"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>Especialidad *</ion-label>
+    <ion-input type="text" [(ngModel)]="especialidad" name="especialidad" required="required"  value="{{ datosusuario.especialidad }}"></ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-label floating>Puesto laboral *</ion-label>
+  <ion-input type="text" [(ngModel)]="puesto" name="puesto" required="required"  value="{{ datosusuario.puesto }}"></ion-input>
+</ion-item>
+
+<br>
+  <button ion-button full   (click)="actualizar()" color="secondary">Guardar</button>
+  <button ion-button full   (click)="cancelar()" color="danger">cancelar</button>
+</ion-content>

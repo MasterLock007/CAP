@@ -1,0 +1,108 @@
+
+
+<ion-menu [content]="content">
+    <ion-header>
+        <ion-navbar color="hys">
+
+            <button ion-button menuToggle>
+                    <ion-icon name="menu"></ion-icon>
+                </button>
+            <ion-title>Menú</ion-title>
+
+            <ion-buttons end>
+                <button ion-button>
+                        <ion-icon name="md-exit"></ion-icon>
+                    </button>
+            </ion-buttons>
+        </ion-navbar>
+    </ion-header>
+    <ion-content>
+         <!--para agregar contenido scrolable -->
+
+
+            <ion-item *ngFor="let p of pages; let i=index" (click)="toggleLevel1('idx'+i)" [ngClass]="{active: isLevel1Shown('idx'+i)}">
+
+                    <ion-icon item-left color="hys" name="md-person"></ion-icon>
+                    Perfil
+                <ion-icon color="hys" item-right [name]="isLevel1Shown('idx'+i) ? 'arrow-dropdown' : 'arrow-dropright'"></ion-icon>
+
+                <ion-list menuClose *ngIf="isLevel1Shown('idx'+i)">
+
+                    <button ion-item (click)="irPerfil()">
+                            <!-- Funcion para ir a la page Perfil -->
+                            Ver Perfil
+                    </button>
+
+
+                    <button ion-item (click)="irCambioContrasena()">
+                            <!-- Funcion para ir a la page Perfil -->
+                            Cambiar Contraseña
+                    </button>
+
+                </ion-list>
+            </ion-item>
+
+           <!-- Hace que se cierre el menu despues de oprimir un boton -->
+
+
+           <ion-item *ngFor="let t of pages; let j=index" (click)="toggleLevel2('idy'+j)" [ngClass]="{active: isLevel2Shown('idy'+j)}">
+
+            <ion-icon item-left color="hys" name="md-person"></ion-icon>
+            Historial
+        <ion-icon color="hys" item-right [name]="isLevel2Shown('idy'+j) ? 'arrow-dropdown' : 'arrow-dropright'"></ion-icon>
+
+        <ion-list menuClose *ngIf="isLevel2Shown('idy'+j)">
+
+            <button ion-item (click)="toMonday()">
+                    <!-- Funcion para ir a la page Perfil -->
+                    Lunes
+            </button>
+
+
+            <button ion-item (click)="toTuesday()">
+                    <!-- Funcion para ir a la page Perfil -->
+                    Martes
+            </button>
+
+            <button ion-item (click)="toWednesday()">
+                    <!-- Funcion para ir a la page Perfil -->
+                    Miercoles
+            </button>
+
+            <button ion-item (click)="toThursday()">
+              <!-- Funcion para ir a la page Perfil -->
+              Jueves
+            </button>
+
+            <button ion-item (click)="toFriday()">
+              <!-- Funcion para ir a la page Perfil -->
+              Viernes
+            </button>
+
+            <button ion-item (click)="toSaturday()">
+              <!-- Funcion para ir a la page Perfil -->
+              Sábado
+            </button>
+
+            <button ion-item (click)="toSunday()">
+              <!-- Funcion para ir a la page Perfil -->
+              Domingo
+            </button>
+
+        </ion-list>
+    </ion-item>
+
+    <button menuClose ion-item (click)="toIncidencia()">
+        <ion-icon item-left color="hys" name="ios-clipboard"></ion-icon>
+        Incidencias
+    </button>
+            <button menuClose ion-item (click)="cerrarSesionUser()">
+                    <ion-icon item-left color="danger" name="md-exit"></ion-icon>
+                    Cerrar sesión
+                </button>
+    </ion-content>
+</ion-menu>
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>
+
+
+

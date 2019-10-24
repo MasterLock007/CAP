@@ -1,0 +1,26 @@
+page-selector-registro {
+    .fondo{
+        background-color:#E3E2E4;
+       background-image: url('../assets/imgs/fondoXoli3.jpg');
+       background-repeat: no-repeat;
+       background-size: cover;
+      background-position-y: 140px;
+       background-position-x :70%; 
+
+       .item {
+        background-color: #E3E2E4;
+        //color:white;  
+        
+
+    }
+
+    }
+
+    .login-button {
+        text-transform: none;
+        border-radius: 3px !important;
+        &.activated {
+          background-color:rgba(#009359, 0.79)  !important;
+        }
+    }
+}

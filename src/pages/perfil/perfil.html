@@ -1,0 +1,62 @@
+<!--
+  Generated template for the PerfilPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+
+    <ion-title>Perfil</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  <div class="centrado">
+    <div class="panel panel-info">
+      <div class="panel-heading">
+        <h5 class="panel-title">Hola {{ datosusuario.nombre }}</h5>
+      </div>
+      <div class="panel-body">
+            <div class="profile-image">
+                    <img src="{{ imgurl }}" alt="no" width="150">
+                  </div>
+                    <button ion-button  small  (click)="tomarFoto()">Tomar Foto </button>
+                    <button ion-button  small  (click)="tomarGaleria()">Subir Imagen</button>
+                    <button ion-button  small  (click)="cambiar(user)">Actualizar Contraseña</button>
+                    <button ion-button  small  color="danger"  (click)="cerrarSesion()">Cerrar sesión</button>
+
+                  <div [hidden]="moveon">
+                    <button ion-button    (click)="updateproceed()">Cargar y Continuar</button>
+                  </div>
+                </div>
+      </div>
+
+      <ion-item>
+        <h6 >Nombre: {{ datosusuario.nombre}} {{ datosusuario.aPaterno}} {{ datosusuario.aMaterno}}</h6>
+      </ion-item>
+      <ion-item>
+        <h6 >Correo: {{ datosusuario.email}}</h6>
+      </ion-item>
+
+      <ion-item> <h6>Área: {{ datosusuario.area}}</h6> </ion-item>
+      <ion-item> <h6>Especialidad: {{ datosusuario.especialidad}}</h6></ion-item>
+      <ion-item> <h6>Puesto: {{ datosusuario.puesto}}</h6></ion-item>
+      <ion-item> <h6>Estado: {{ datosusuario.estado}}</h6> </ion-item>
+      <ion-item><h6>Municipio: {{ datosusuario.municipio}}</h6> </ion-item>
+      <ion-item>  <h6>Teléfono: {{ datosusuario.telefono}}</h6> </ion-item>
+        <button ion-button  small  (click)="editar()" color="secondary">Editar informacion</button>
+
+
+
+
+
+
+
+    </div>
+
+
+
+</ion-content>

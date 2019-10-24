@@ -1,0 +1,26 @@
+page-olvido-contrasena {
+    .fondo{
+        background-color:#E9EDE2;
+      // background-image: url('../assets/imgs/fondoXoli4.jpg');
+       background-repeat: no-repeat;
+       background-size: cover;
+      background-position-y: 140px;
+       background-position-x :70%;
+
+       .item {
+        background-color: #E9EDE2;
+        //color:white;
+
+
+    }
+
+    }
+    .login-button {
+        text-transform: none;
+        border-radius: 3px !important;
+        &.activated {
+          background-color:rgba(#009359, 0.79)  !important;
+        }
+    }
+
+}

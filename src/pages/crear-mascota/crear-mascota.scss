@@ -1,0 +1,33 @@
+page-crear-mascota {
+
+}
+
+label.texto1
+{
+  color: darkred;
+  opacity: 0.5;
+}
+
+.centrado
+{
+    text-align: center;
+}
+
+
+.avatar
+{
+    border: 4px solid lightslategrey;
+    border-radius: 70%;
+    float: left;
+    height: 100px;
+    width: 100px;
+
+}
+
+.min {
+    text-transform: none;
+    border-radius: 3px !important;
+    &.activated {
+      background-color:rgba(#009359, 0.79)  !important;
+    }
+}

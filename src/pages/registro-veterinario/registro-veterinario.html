@@ -1,0 +1,68 @@
+<ion-header>
+
+    <ion-navbar color="primary">
+        <ion-title>Registrate</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <div class="splash-logo"></div>
+
+    <ion-list>
+        <ion-item>
+            <ion-label>Campos obligatorios: *</ion-label>
+        </ion-item>
+        <ion-item>
+            <ion-label floating>Nombre completo *</ion-label>
+            <ion-input type="text" [(ngModel)]="nombre" name="nombre" required="required"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label floating>Cédula *</ion-label>
+            <ion-input type="text" [(ngModel)]="cedula" name="cedula" required="required"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label floating>Especialidad *</ion-label>
+            <ion-input type="text" [(ngModel)]="especialidad" name="especialidad" required="required"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label stacked>Correo electrónico *</ion-label>
+            <ion-input type="email" [(ngModel)]="email" name="email" placeholder="ejemplo@ejemplo.com"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label stacked>Telefono de 10 digítos *</ion-label>
+            <ion-input type="text" [(ngModel)]="telefono" name="telefono" placeholder="ej. 555 555 5555" required="required"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label floating>Estado * </ion-label>
+            <ion-select [(ngModel)]="estado" (ionChange)="cargarMunicipios()">
+                <ion-option *ngFor="let c of objDataEstadosVet" value="{{c.name}}">{{c.name}} </ion-option>
+            </ion-select>
+        </ion-item>
+        <ion-item>
+            <ion-label floating>Municipio *</ion-label>
+            <ion-select [(ngModel)]="municipio" [disabled]="municipiosselect.length==0" name="municipio">
+                <ion-option *ngFor="let m of municipiosselect" value="{{m.name}}">{{m.name}}</ion-option>
+            </ion-select>
+        </ion-item>
+        <ion-item>
+            <ion-label floating>Contraseña *</ion-label>
+            <ion-input type="password" [(ngModel)]="contrasena" name="contrasena"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label floating>Repetir contraseña *</ion-label>
+            <ion-input type="password" [(ngModel)]="repetirContra" name="repetirContra"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>Acepto los terminos y condiciones de uso</ion-label>
+            <ion-toggle [(ngModel)]="terminos" checked="false"></ion-toggle>
+        </ion-item>
+        <div padding text-center>
+            <button ion-button color="danger"  (click)="doSignup()">Crear cuenta</button>
+        </div>
+
+    </ion-list>
+
+</ion-content>

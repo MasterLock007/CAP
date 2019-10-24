@@ -1,0 +1,62 @@
+<ion-header>
+
+    <ion-navbar color="hys">
+        <ion-title>Asistencias de personal</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+
+
+
+      <ion-card *ngFor="let asistencia of asistenciasM;let pos =index">
+      <ion-item>
+          <h2>{{asistencia.empresa}} , {{asistencia.lugar}}</h2>
+          <p>{{asistencia.fecha}}</p>
+        </ion-item>
+        <ion-card-content>
+          <p>Nombre: {{asistencia.nombre}} </p>
+          <p>Clave: {{asistencia.clave}} </p>
+
+        </ion-card-content>
+        <ion-row>
+            <ion-col>
+              <button ion-button icon-start clear small>
+                <ion-icon name="md-done-all"></ion-icon>
+                <div *ngIf="asistencia.estatus==0">entrada</div>
+                <div *ngIf="asistencia.estatus==1">Salida</div>
+              </button>
+            </ion-col>
+
+              <ion-col align-self-center text-center>
+                  <ion-note>
+                      {{asistencia.hora}}
+                  </ion-note>
+                </ion-col>
+          </ion-row>
+
+      </ion-card>
+
+
+      <ion-fab bottom right >
+          <button ion-fab  >Días</button>
+          <ion-fab-list side="top">
+            <button color="hys" (click)="getLunes()"ion-fab>L</button>
+            <button color="hys" (click)="getMartes()"ion-fab>M</button>
+            <button color="hys"  (click)="getMiercoles()" ion-fab>Mi</button>
+            <button color="hys" (click)="getJueves()" ion-fab>J</button>
+            <button color="hys" (click)="getViernes()" ion-fab>V</button>
+          </ion-fab-list>
+          <ion-fab-list side="left">
+            <button color="hys"(click)="getSabado()" ion-fab>S</button>
+            <button color="hys" (click)="getDomingo()" ion-fab>D</button>
+          </ion-fab-list>
+        </ion-fab>
+
+
+
+
+</ion-content>

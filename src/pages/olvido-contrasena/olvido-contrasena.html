@@ -1,0 +1,20 @@
+<ion-header>
+
+    <ion-navbar color="hys">
+        <ion-title>Recuperar contraseña</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="fondo">
+    <ion-item>
+        <ion-label floating>Ingresa tu correo electrónico</ion-label>
+        <ion-input type="email" [(ngModel)]="email" name="email" required="required"></ion-input>
+    </ion-item>
+    <div padding text-center>
+        <button ion-button (click)="recuperaContrasena()" block color="hys" round class="login-button">Recuperar</button>
+        <!-- <button ion-button *ngIf="!email" color="danger"  *ngIf="email"round class="login-button">Recuperar</button>-->
+    </div>
+
+</ion-content>

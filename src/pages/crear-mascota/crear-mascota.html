@@ -1,0 +1,107 @@
+<!--
+  Generated template for the CrearMascotaPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+    <ion-navbar color="primary">
+        <ion-title>Añadir Mascota</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+    <ion-list>
+
+        <div class="centrado">
+            <img [src]="image" *ngIf="image" alt="no Foto" class="avatar" width="150">
+        </div>
+
+
+        <div class="centrado">
+            <button ion-button class="min" round (click)="takeSelfie()" id="carga" class="min">Tomar Foto</button>
+            <br>
+            <button ion-button round (click)="takeGall()" class="min">Subir Foto</button>
+        </div>
+
+        <br><br>
+        <label class="texto1">Campos Requeridos *</label>
+        <ion-item>
+
+            <ion-label stacked>Nombre de la mascota: *</ion-label>
+
+            <!--  [(ngModel)]="note.tittle con esto hacemos referencia a una propiedad(tittle) 
+          que se encuentra dentro del obj note  -->
+            <ion-input type="text" [(ngModel)]="mascota.nombre" required="required" name="nombre"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label stacked>Raza: *</ion-label>
+            <ion-input type="text" [(ngModel)]="mascota.raza" name="raza"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label stacked>Sexo: *</ion-label>
+            <ion-select [(ngModel)]="mascota.sexo" okText="Aceptar" cancelText="Cancelar">
+                <ion-option value="Macho">Macho</ion-option>
+                <ion-option value="Hembra">Hembra</ion-option>
+            </ion-select>
+        </ion-item>
+
+        <ion-item>
+            <ion-label stacked>Pedigrí: </ion-label>
+            <ion-checkbox [(ngModel)]="mascota.pedigri" checked="false" name="pedigri"></ion-checkbox>
+        </ion-item>
+
+        <ion-item>
+            <ion-label stacked>Disponible para cruza: </ion-label>
+            <ion-checkbox [(ngModel)]="mascota.cruza" checked="false" name="cruza"></ion-checkbox>
+        </ion-item>
+
+        <ion-item>
+            <ion-label stacked>Descripción:</ion-label>
+            <ion-input type="text" [(ngModel)]="mascota.descripcion"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label stacked>Fecha de Adopción/Nacimiento: *</ion-label>
+            <ion-datetime [(ngModel)]="mascota.fecha_na" name="fechaNA" displayFormat="DD-MM-YYYY" placeholder="Día-Mes-Año"></ion-datetime>
+        </ion-item>
+
+        <ion-item>
+            <ion-label stacked>Fecha de Muerte:</ion-label>
+            <ion-datetime [(ngModel)]="mascota.fecha_m" displayFormat="DD-MM-YYYY" placeholder="Día-Mes-Año"></ion-datetime>
+        </ion-item>
+
+    </ion-list>
+
+
+
+    <div class="centrado">
+        <button *ngIf="!nombre && !especie" ion-button color="primary" (click)="editarMascota()" class="min">Guardar Mascota</button>
+        <button *ngIf="id!=0" ion-button color="danger" (click)="borrarM()" class="min">Eliminar Mascota</button> <br><br>
+    </div>
+
+    <!--
+<form [formGroup]="myForm" (ngSubmit)="saveData()" novalidate>
+  <ion-list>
+    <ion-item>
+      <ion-label stacked>Nombre:</ion-label>
+      <ion-input formControlName="nombre" type="text"></ion-input >
+    </ion-item>
+    <ion-item *ngIf="myForm.get('nombre').errors && myForm.get('nombre').dirty" >
+      <p color="danger" ion-text *ngIf="myForm.get('nombre').hasError('required')">Field is required</p>
+    </ion-item>
+  </ion-list>
+</form>
+
+ <div padding>
+    <button ion-button block color="primary" (click)="editarMascota()">Guardar Mascota</button>
+    <button *ngIf="id!=0" ion-button block color="danger" (click)="borrarM() ">Eliminar Mascota</button>
+  </div>
+-->
+</ion-content>
