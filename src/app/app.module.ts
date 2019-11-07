@@ -59,12 +59,14 @@ import { IncidenciaPage} from '../pages/incidencia/incidencia';
 
 // Initialize Firebase
 export const config = {
-  apiKey: "AIzaSyBNCFB3bmWNhhEtavyQcwkrpSJaFgyuUf0",
-    authDomain: "hysa-3b554.firebaseapp.com",
-    databaseURL: "https://hysa-3b554.firebaseio.com",
-    projectId: "hysa-3b554",
-    storageBucket: "hysa-3b554.appspot.com",
-    messagingSenderId: "458967505030"
+  apiKey: "AIzaSyCgmkJqpp2B_8esjzRbHYRvWgts9b_-L2g",
+  authDomain: "capapp-65186.firebaseapp.com",
+  databaseURL: "https://capapp-65186.firebaseio.com",
+  projectId: "capapp-65186",
+  storageBucket: "capapp-65186.appspot.com",
+  messagingSenderId: "185120088073",
+  appId: "1:185120088073:web:0260791ffae369b5fb58d8",
+  measurementId: "G-GFCEZ88J6E"
 };
 firebase.initializeApp(config);
 
