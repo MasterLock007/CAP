@@ -2,8 +2,6 @@ import { Component, ViewChild, NgZone } from '@angular/core';
 import { IonicPage, NavController, NavParams, Nav, AlertController, LoadingController, ToastController, ModalController } from 'ionic-angular';
 import * as firebase from 'firebase';
 import { UsersserviceProvider } from '../../providers/usersservice/usersservice';
-import { MascotaPage } from "../mascota/mascota";
-import { CrearMascotaPage } from "../crear-mascota/crear-mascota";
 import { Camera } from '@ionic-native/camera';
 import { NotesService } from '../../services/Notes.services';
 import { ImghandlerProvider } from '../../providers/imghandler/imghandler';

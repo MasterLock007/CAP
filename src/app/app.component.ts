@@ -9,7 +9,7 @@ import { PerfilPage } from "../pages/perfil/perfil";
 import { HomePage } from "../pages/home/home";
 import { LoginPage } from "../pages/login/login";
 import * as firebase from "firebase";
-import { HomeVeterinarioPage } from "../pages/home-veterinario/home-veterinario";
+import { HomeAdministradorPage } from "../pages/home-administrador/home-administrador";
 import { UsersserviceProvider } from "../providers/usersservice/usersservice";
 import { CambioContrasenaPage } from '../pages/cambio-contrasena/cambio-contrasena';
 import { User } from '../interfaces/user';
@@ -69,7 +69,7 @@ export class MyApp {
             if (datos != null) {
               if (datos.tipo_usuario == "V") {
 
-                that.rootPage = HomeVeterinarioPage;
+                that.rootPage = HomeAdministradorPage;
 
 
               } else {

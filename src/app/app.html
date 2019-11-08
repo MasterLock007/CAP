@@ -50,46 +50,49 @@
             <ion-icon item-left color="hys" name="md-person"></ion-icon>
             Historial
         <ion-icon color="hys" item-right [name]="isLevel2Shown('idy'+j) ? 'arrow-dropdown' : 'arrow-dropright'"></ion-icon>
-
+<!--
         <ion-list menuClose *ngIf="isLevel2Shown('idy'+j)">
 
             <button ion-item (click)="toMonday()">
-                    <!-- Funcion para ir a la page Perfil -->
+
                     Lunes
             </button>
 
 
             <button ion-item (click)="toTuesday()">
-                    <!-- Funcion para ir a la page Perfil -->
+
                     Martes
             </button>
 
             <button ion-item (click)="toWednesday()">
-                    <!-- Funcion para ir a la page Perfil -->
+
                     Miercoles
             </button>
 
             <button ion-item (click)="toThursday()">
-              <!-- Funcion para ir a la page Perfil -->
+
               Jueves
             </button>
 
             <button ion-item (click)="toFriday()">
-              <!-- Funcion para ir a la page Perfil -->
+
               Viernes
             </button>
 
             <button ion-item (click)="toSaturday()">
-              <!-- Funcion para ir a la page Perfil -->
+
               Sábado
             </button>
 
             <button ion-item (click)="toSunday()">
-              <!-- Funcion para ir a la page Perfil -->
+
               Domingo
             </button>
 
         </ion-list>
+
+      -->
+
     </ion-item>
 
     <button menuClose ion-item (click)="toIncidencia()">
@@ -99,7 +102,7 @@
             <button menuClose ion-item (click)="cerrarSesionUser()">
                     <ion-icon item-left color="danger" name="md-exit"></ion-icon>
                     Cerrar sesión
-                </button>
+            </button>
     </ion-content>
 </ion-menu>
 <ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

@@ -8,8 +8,7 @@ import {
   AlertController,
   MenuController
 } from "ionic-angular";
-import { SelectorRegistroPage } from "../selector-registro/selector-registro";
-import { UsersserviceProvider } from "../../providers/usersservice/usersservice";
+ import { UsersserviceProvider } from "../../providers/usersservice/usersservice";
 import { OlvidoContrasenaPage } from "../olvido-contrasena/olvido-contrasena";
 import { HomePage } from "../home/home";
 import { User } from "../../interfaces/user";

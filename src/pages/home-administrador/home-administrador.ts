@@ -7,12 +7,12 @@ import { FirmarsePage } from '../firmarse/firmarse';
 import { PerfilPage } from '../perfil/perfil';
 
 @Component({
-  selector: 'page-home-veterinario',
-  templateUrl: 'home-veterinario.html',
+  selector: 'page-home-administrador',
+  templateUrl: 'home-administrador.html',
   providers: [UsersserviceProvider]
 })
 
-export class HomeVeterinarioPage {
+export class HomeAdministradorPage {
 
   tab1Root = HistorialPage;
   tab2Root = UsuariovePage;
