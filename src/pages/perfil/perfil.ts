@@ -198,17 +198,9 @@ moveon = true;
     modal.present();
   }
 
-  irMascota()
-  {
 
-    this.navCtrl.push(MascotaPage);
 
-  }
 
-  crearMascota()
-  {
-    this.navCtrl.push(CrearMascotaPage, { id: 0 });
-  }
 
   mostrarAlerta(msj1, msj2) {
     let alert = this.alertCtrl.create({
