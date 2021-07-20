@@ -67,7 +67,7 @@
     "ngx-qrcode2": "0.0.9",
     "pdfmake": "^0.1.54",
     "phonegap-plugin-barcodescanner": "8.0.1",
-    "react-native": "^0.59.1",
+    "react-native": "^0.62.3",
     "rxjs": "^6.4.0",
     "rxjs-compat": "^6.4.0",
     "save": "^2.3.2",
